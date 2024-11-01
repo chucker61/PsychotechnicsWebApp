@@ -1,0 +1,39 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@await Html.PartialAsync("~/Views/Layout/HeadPartial.cshtml")
+
+<body>
+    <!-- Spinner Start -->
+    @await Html.PartialAsync("~/Views/Layout/SpinnerPartial.cshtml")
+    <!-- Spinner End -->
+    <!-- Topbar Start -->
+    @await Html.PartialAsync("~/Views/Layout/TopBarPartial.cshtml")
+    <!-- Topbar End -->
+    <!-- Navbar & Hero Start -->
+    @await Html.PartialAsync("~/Views/Layout/NavbarPartial.cshtml")
+    <!-- Navbar & Hero End -->
+    <div>
+
+        @RenderBody()
+    </div>
+
+    <!-- Footer Start -->
+    @await Html.PartialAsync("~/Views/Layout/FooterPartial.cshtml")
+    <!-- Footer End -->
+    <!-- Copyright Start -->
+    @await Html.PartialAsync("~/Views/Layout/CopyrightPartial.cshtml")
+    <!-- Copyright End -->
+    <!-- Back to Top -->
+    @await Html.PartialAsync("~/Views/Layout/BacktotheTopPartial.cshtml")
+
+
+    <!-- JavaScript Libraries -->
+    @await Html.PartialAsync("~/Views/Layout/ScriptPartial.cshtml")
+</body>
+
+</html>
